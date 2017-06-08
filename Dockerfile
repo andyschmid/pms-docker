@@ -1,9 +1,10 @@
-FROM linuxserver/plex:latest
+FROM plexinc/pms-docker:plexpass
 
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y python3 git build-essential libargtable2-dev autoconf \
-    libtool-bin ffmpeg libsdl1.2-dev libavutil-dev libavformat-dev libavcodec-dev && \
+    automake libtool libtool-bin ffmpeg libsdl1.2-dev libavutil-dev \
+    libavformat-dev libavcodec-dev mkvtoolnix && \
 
 cd /opt && \
 git clone git://github.com/erikkaashoek/Comskip && \
@@ -19,3 +20,7 @@ touch /var/log/PlexComskip.log && \
 chmod 777 /var/log/PlexComskip.log
 
 ADD ./PlexComskip.conf /opt/PlexComskip/PlexComskip.conf
+ADD ./comskip.sh /opt/PlexComskip/comskip.sh
+
+RUN chmod 777 /opt/PlexComskip/comskip.sh
+

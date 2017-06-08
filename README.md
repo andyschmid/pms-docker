@@ -1,14 +1,16 @@
-# K-Plex
+# PMS-Docker
 
-Inspired by Plex DVR. This container has [Comskip](https://github.com/erikkaashoek/Comskip) and [PlexComskip](https://github.com/ekim1337/PlexComskip) installed to remove commercials from any DVR'd content. Conatiner based on [linuxserver/plex](https://hub.docker.com/r/linuxserver/plex/).
+Forked from Kevin McGill's excellent repository at https://github.com/kmcgill88/k-plex  Changes include migrating to the official Plex Docker image, instead of LinuxServer.IO's version.
+
+Inspired by Plex DVR. This container has [Comskip](https://github.com/erikkaashoek/Comskip) and [PlexComskip](https://github.com/ekim1337/PlexComskip) installed to remove commercials from any DVR'd content. 
 
 ### How to use:
-- [Pull k-plex from docker](https://hub.docker.com/r/kmcgill88/k-plex/) by running, `docker pull kmcgill88/k-plex`
-- Run the container as described by [linuxserver/plex](https://hub.docker.com/r/linuxserver/plex/)
+- [Pull pms-docker from docker](https://hub.docker.com/r/mandreko/pms-docker/) by running, `docker pull mandreko/pms-docker`
+- Run the container as described by [plexinc/pms-docker](https://github.com/plexinc/pms-docker)
 - Once running, go to Plex Settings, then DVR (Beta)
 - DVR Settings
 - Scroll to `POSTPROCESSING SCRIPT`
-- Enter `/opt/PlexComskip/PlexComskip.py`
+- Enter `/opt/PlexComskip/comskip.sh`
 - Click `Save`.
 - Enjoy commercial free TV!
 
