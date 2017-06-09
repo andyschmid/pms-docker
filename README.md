@@ -14,6 +14,6 @@ Inspired by Plex DVR. This container has [Comskip](https://github.com/erikkaasho
 - Click `Save`.
 - Enjoy commercial free TV!
 
-![](https://mcgilln.com/images/github/k-plex.jpg)
+![](https://raw.githubusercontent.com/wiki/mandreko/pms-docker/mandreko-pms-docker.png)
 
 When DVR recordings end, `Comskip` will automatically run and the show will be added to your Plex library.
